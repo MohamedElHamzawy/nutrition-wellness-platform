@@ -36,6 +36,9 @@ change the other.
 - **Content is never JS-dependent.** The reveal animations only apply once a class is
   set from `<head>`; if scripting fails the proposal still renders in full.
 - **Figures.** USD governs; KWD is shown at 1 KWD = 3.25 USD.
+- **Cache-busting.** `index.html` loads the CSS and JS as `?v=N`. Bump `N` whenever
+  you change a file in `assets/`, or readers who already opened the link keep the
+  cached version and never see the edit.
 
 ## Local preview
 
