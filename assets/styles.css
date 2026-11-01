@@ -1368,11 +1368,21 @@ tr.is-total td {
   border-bottom: 1px solid var(--green-soft);
 }
 
-tr.is-grand td {
+/* The gradient belongs on the row, not the cells: painted per-cell it restarts
+   in each one and the total renders as four dark-to-light bands. */
+tr.is-grand {
   background: linear-gradient(90deg, var(--green-deep), var(--green));
+}
+
+tr.is-grand td {
+  background: transparent;
   color: #fff;
   font-weight: 700;
   font-size: 15.5px;
+}
+
+tr.is-grand:hover td {
+  background: transparent;
 }
 
 tr.is-addon td {
